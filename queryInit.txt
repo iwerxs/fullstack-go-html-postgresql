@@ -1,0 +1,18 @@
+init.sql
+CREATE TABLE students(
+  name VARCHAR(100) PRIMARY KEY,
+  klass INT,
+  grade INT
+);
+INSERT INTO students VALUES ('Karthikeyan' 11, 195);
+INSERT INTO students VALUES ('Kumar' 12, 183);
+INSERT INTO students VALUES ('Sri Kanth' 11, 190);
+INSERT INTO students VALUES ('Muthu' 12, 181);
+
+
+query.sql
+INSERT INTO testschdb VALUES ('Dinesh', 11, 188);
+INSERT INTO testschdb VALUES ('Dina', 12, 192);
+UPDATE students SET mark=120 WHERE name='Dinesh';
+UPDATE students SET klass=11 WHERE name='Dina';
+DELETE FROM students WHERE name='Dinesh';
