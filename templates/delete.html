@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>delete</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="taskbar">
+        <a href="/index.html">Home</a>
+        <a href="/insert.html">Insert</a>
+        <a href="/read.html">Read</a>
+        <a href="/update.html">Update</a>
+        <a href="/delete.html">Delete</a>
+      </div>
+      <div class="root">
+        <h1 class="heading-top">Welcome to</h1>
+        <h1 class="heading-bottom"><span class="delete-user">Delete</span> page</h1>
+        <div class="content">
+          <form action="/delete">
+            <table>
+              <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name" /></td>
+              </tr>
+              <tr>
+                <td></td><td class="btn-sub"><input type="submit" value="Delete"></td>
+              </tr>
+            </table>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

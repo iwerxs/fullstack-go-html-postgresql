@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>read</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="taskbar">
+        <a href="/index.html">Home</a>
+        <a href="/insert.html">Insert</a>
+        <a href="/read.html">Read</a>
+        <a href="/update.html">Update</a>
+        <a href="/delete.html">Delete</a>
+      </div>
+      <div class="root">
+        <h1 class="heading-top">Welcome to</h1>
+        <h1 class="heading-bottom"><span class="read-user">Read</span> page</h1>
+        <table class="table-read">
+          <tr>
+            <th class="table-head">Name</th>
+            <th class="table-head">Class</th>
+            <th class="table-head">Grade</th>
+          </tr>
+          {{range .}}
+          <tr>
+            <td class="table-data">{{.Name}}</td>
+            <td class="table-data">{{.Klass}}</td>
+            <td class="table-data">{{.Grade}}</td>
+          </tr>
+          {{end}}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>update</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="taskbar">
+        <a href="/index.html">Home</a>
+        <a href="/insert.html">Insert</a>
+        <a href="/read.html">Read</a>
+        <a href="/update.html">Update</a>
+        <a href="/delete.html">Delete</a>
+      </div>
+      <div class="root">
+        <h1 class="heading-top">Welcome to</h1>
+        <h1 class="heading-bottom"><span class="update-user">Update</span> page</h1>
+        <div class="content">
+          <!--link to backend server to /search for a student-->
+          <form action="/search">
+            <table>
+              <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name" value="{{.Name}}" /></td> <!--take value from db via Golang-->
+              </tr>
+              <tr>
+                <td></td><td class="btn-sub"><input type="submit" value="Search"></td>
+              </tr>
+            </table>
+          </form>
+          <!-- Update Form, this should only be filled after the search -->
+           {{if .Name}}
+          <form action="/update">
+            <input type="hidden" id="name" name="name" value="{{.Name}}" /> <!--Name needed as primary key-->
+            <table>
+              <tr>
+                <td><label for="klass">Class</label></td>
+                <td><input type="number" id="klass" name="klass" value="{{.Klass}}" /></td> <!--take value from db via Golang-->
+              </tr>
+              <tr>
+                <td><label for="grade">Grade</label></td>
+                <td><input type="number" id="grade" name="grade" value="{{.Grade}}" /></td> <!--take value from db via Golang-->
+              </tr>
+              <tr>
+                <td></td><td class="btn-sub"><input type="submit" value="Submit"></td>
+              </tr>
+            </table>
+          </form>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
